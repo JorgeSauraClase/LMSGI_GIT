@@ -1,0 +1,167 @@
+/* estilos.css */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Fondo de la página */
+body {
+    background: url('../img/fondo.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header con Logo y Título */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 60px 20px 20px; 
+    position: relative;
+}
+
+header img {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin: 0;
+    padding-top: 35px;
+}
+
+/* Estilos de Filtros */
+#filtros {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #f8f4e5;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#filtros h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+form label {
+    display: inline-block;
+    width: 200px;
+    margin-top: 10px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select {
+    padding: 5px;
+    width: calc(100% - 220px);
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+}
+
+form button {
+    margin-top: 10px;
+    padding: 8px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button[type="submit"] {
+    background-color: #28a745;
+}
+
+form button[type="reset"] {
+    background-color: #007bff;
+}
+
+form button:hover {
+    opacity: 0.9;
+}
+
+/* Estilos de la Tabla */
+#listado h3 {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+th {
+    background-color: #b23b3b;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fafafa;
+}
+
+tr:nth-child(even) td {
+    background-color: #f0e6d6;
+}
+
+/* Botón de Editar en la Tabla */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer centrado y fijo en la parte inferior */
+main {
+    flex: 1; 
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
