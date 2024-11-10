@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Actividades</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>IAX actividades extraescolares</h1>
+    </header>
+    
+    <main>
+        <section id="filtros">
+            <h3>Filtros:</h3>
+            <form>
+                <label for="profesor">Nombre profesor responsable:</label>
+                <input type="text" id="profesor" name="profesor">
+                
+                <label for="titulo">Título de la actividad:</label>
+                <input type="text" id="titulo" name="titulo">
+                
+                <label for="pendiente">Pendiente de validar:</label>
+                <input type="checkbox" id="pendiente" name="pendiente">
+                
+                <label for="fecha_desde">Fecha desde:</label>
+                <input type="date" id="fecha_desde" name="fecha_desde">
+                
+                <label for="fecha_hasta">Fecha hasta:</label>
+                <input type="date" id="fecha_hasta" name="fecha_hasta">
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        
+        <section id="listado">
+            <h3>Listado de actividades propuestas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pte. validar</th>
+                        <th>Nombre profe. resp.</th>
+                        <th>Título o denominación de la actividad</th>
+                        <th>Departamento</th>
+                        <th>Fecha/hora de inicio/salida</th>
+                        <th>Fecha/hora de fin/llegada</th>
+                        <th>Lugar de realización</th>
+                        <th>Grupos implicados</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Rodrigo Martínez Rodríguez</td>
+                        <td>Visita a CPD Universidad de Murcia</td>
+                        <td>Informática</td>
+                        <td>10/11/2022 09:00</td>
+                        <td>10/11/2022 14:00</td>
+                        <td>Campus de Espinardo</td>
+                        <td>DAM1, DAM2, DAM1d, DAM2d</td>
+                        <td><button>Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>María Marquez</td>
+                        <td>Visita a empresa NTTData</td>
+                        <td>Informática</td>
+                        <td>20/11/2022 10:00</td>
+                        <td>20/11/2022 14:30</td>
+                        <td>Juan Carlos I, edif. Torre de cristal</td>
+                        <td>DAM2, DAM2d</td>
+                        <td><button>Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>Benito Sánchez</td>
+                        <td>Visita a empresa Capgemini</td>
+                        <td>Informática</td>
+                        <td>25/11/2022 11:00</td>
+                        <td>25/11/2022 13:00</td>
+                        <td>Torre B. C. Nelva, 1, 30006 Murcia</td>
+                        <td>DAM2, DAM2d</td>
+                        <td><button>Editar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Instituto de Actividades Extraescolares</p>
+    </footer>
+</body>
+</html>
