@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAX actividades extraescolares - formulario</title>
+    <title>Formulario de Edición / Creación de Actividad</title>
+    <link rel="stylesheet" href="css/estilos2.css">
 </head>
 <body>
     <header>
+        <img src="img/iax_logo.png" alt="Logo Instituto">
         <h1>IAX actividades extraescolares - formulario</h1>
     </header>
+    
     <main>
         <section id="formulario">
             <h2>Alta/Edición de actividad:</h2>
             <form>
                 <label for="email_profesor">Email profesor responsable:</label>
                 <input type="email" id="email_profesor" name="email_profesor" required>
+
                 <label for="nombre_profesor">Nombre profesor responsable:</label>
                 <input type="text" id="nombre_profesor" name="nombre_profesor" required>
                 
@@ -46,7 +50,7 @@
                 <input type="date" id="fecha_fin" name="fecha_fin" required>
                 <input type="time" id="hora_fin" name="hora_fin" required>
                 
-                <label for="lugar">Lugar de realización de la actividad (indicar lugar, municipio, provincia...):</label>
+                <label for="lugar">Lugar de realización de la actividad (indicar lugar, municipio, provincia):</label>
                 <textarea id="lugar" name="lugar" rows="2" required></textarea>
                 
                 <label for="grupos">Grupos de alumnos implicados (selecciona uno o varios):</label>
@@ -57,17 +61,24 @@
                     <option value="DAM2d">DAM2d</option>
                 </select>
                 
-                <label>¿Se necesita autobús?</label>
-                <label><input type="radio" name="autobus" value="si" required> Sí</label>
-                <label><input type="radio" name="autobus" value="no" required> No</label>
-                
+                <fieldset>
+                    <legend>¿Se necesita autobús?</legend>
+                    <label><input type="radio" name="autobus" value="si" required> Sí</label>
+                    <label><input type="radio" name="autobus" value="no" required> No</label>
+                </fieldset>
+
                 <label for="coste">Coste de la actividad (€) para el alumno:</label>
                 <input type="number" id="coste" name="coste" step="0.01">
-                
-                <button type="submit">Enviar</button>
+
+                <!-- Grupo de botones alineados a la derecha -->
+                <div class="button-group">
+                    <button type="reset">Limpiar</button>
+                    <button type="submit">Enviar</button>
+                </div>
             </form>
         </section>
     </main>
+    
     <footer>
         <p>Instituto de Actividades Extraescolares</p>
     </footer>
