@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IAX Actividades Extraescolares</title>
+    <link rel="stylesheet" href="css/estilos3.css">
+    <link rel="icon" href="img/iax_favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img src="img/iax_logo.png" alt="Logo Instituto">
+        <h1>IAX Actividades Extraescolares</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="cargarSeccion('bienvenida.html')">Página Principal</a></li>
+            <li><a href="#" onclick="cargarSeccion('listado.html')">Listado</a></li>
+            <li><a href="#" onclick="cargarSeccion('formulario.html')">Formulario</a></li>
+            <li><a href="#" onclick="cargarSeccion('ultimasactividades.html')">Últimas Actividades</a></li>
+            <li><a href="#" onclick="cargarSeccion('localizacion.html')">Localización</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="contenido">
+            <iframe src="bienvenida.html" id="iframe-contenido" style="width: 100%; height: 600px; border: none;"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contacto: 30006151@murciaeduca.es | Teléfono: 968232040 | Dirección: Av. Don Juan de Borbón, 3, 30007 Murcia</p>
+    </footer>
+
+    <script>
+        function cargarSeccion(pagina) {
+            document.getElementById('iframe-contenido').src = pagina;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/* estilos.css para index.html */
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Fondo de la página */
+body {
+    background: url('../img/fondo.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header con Logo y Título */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 60px 20px 20px; 
+    position: relative;
+}
+
+header img {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin: 0;
+    padding-top: 35px;
+}
+
+/* Estilo del menú de navegación */
+nav {
+    display: flex;
+    justify-content: center; 
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; 
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer centrado y fijo en la parte inferior */
+main {
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
