@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE prisiones SYSTEM "saura_diaz_jorge_prisiones.dtd">
+<prisiones>
+    <prision>
+        <codigo>P001</codigo>
+        <nombre>Prisión Madrid I</nombre>
+        <director>
+            <nombre_completo>Juan Pérez López</nombre_completo>
+            <fecha_nombramiento>2022-01-15</fecha_nombramiento>
+        </director>
+        <direccion>Calle Mayor, 123, Madrid</direccion>
+        <fecha_inauguracion>1995-06-20</fecha_inauguracion>
+        <capacidad>500</capacidad>
+        <funcionarios>
+            <funcionario>
+                <puesto tipo="carcelero">Guardia Principal</puesto>
+                <fecha_incorporacion>2005-09-12</fecha_incorporacion>
+                <nombre_completo>María Gómez Sánchez</nombre_completo>
+            </funcionario>
+            <funcionario>
+                <puesto tipo="administrativo">Secretario</puesto>
+                <fecha_incorporacion>2010-04-18</fecha_incorporacion>
+                <nombre_completo>Carlos Ruiz Fernández</nombre_completo>
+            </funcionario>
+        </funcionarios>
+        <reclusos>
+            <recluso>
+                <numero>R001</numero>
+                <nombre_completo>Pedro López García</nombre_completo>
+                <numero_celda>101</numero_celda>
+                <fecha_ingreso>2023-03-10</fecha_ingreso>
+                <duracion_condena>5 años</duracion_condena>
+                <peligrosidad nivel="peligroso">Peligroso</peligrosidad>
+            </recluso>
+            <recluso>
+                <numero>R002</numero>
+                <nombre_completo>Javier Martínez Díaz</nombre_completo>
+                <numero_celda>102</numero_celda>
+                <fecha_ingreso>2021-11-05</fecha_ingreso>
+                <duracion_condena>10 años</duracion_condena>
+                <peligrosidad nivel="muy_peligroso">Muy peligroso</peligrosidad>
+            </recluso>
+        </reclusos>
+        <celdas>
+            <celda>
+                <numero>101</numero>
+                <pabellon>A</pabellon>
+                <plazas>2</plazas>
+            </celda>
+            <celda>
+                <numero>102</numero>
+                <pabellon>B</pabellon>
+                <plazas>4</plazas>
+            </celda>
+        </celdas>
+    </prision>
+</prisiones>

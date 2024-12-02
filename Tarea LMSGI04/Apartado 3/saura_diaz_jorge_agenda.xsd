@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!-- Elemento raíz -->
+    <xs:element name="agenda">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ficha" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="apellido1" type="xs:string"/>
+                            <xs:element name="apellido2" type="xs:string" minOccurs="0"/>
+                            <xs:element name="telefonos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="telefono" maxOccurs="5" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="tipo" use="required">
+                                                            <xs:simpleType>
+                                                                <xs:restriction base="xs:string">
+                                                                    <xs:enumeration value="movil"/>
+                                                                    <xs:enumeration value="fijo"/>
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:attribute>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="telefonos_internacionales" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="telefono_internacional" maxOccurs="2">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="\+\d{2} \d{9}"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="emails" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="email" maxOccurs="2">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="direcciones_postales" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="direccion" maxOccurs="3">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="calle" type="xs:string"/>
+                                                    <xs:element name="piso" type="xs:string" minOccurs="0"/>
+                                                    <xs:element name="letra" type="xs:string" minOccurs="0"/>
+                                                    <xs:element name="codigo_postal">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:integer">
+                                                                <xs:minInclusive value="10000"/>
+                                                                <xs:maxInclusive value="99999"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                    <xs:element name="ciudad" type="xs:string"/>
+                                                    <xs:element name="pais" type="xs:string"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="categoria" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="empresa"/>
+                                    <xs:enumeration value="particular"/>
+                                    <xs:enumeration value="comercial"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        <xs:attribute name="zona" use="optional">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="La flota"/>
+                                    <xs:enumeration value="Infante"/>
+                                    <xs:enumeration value="San Antón"/>
+                                    <xs:enumeration value="Ronda Norte"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

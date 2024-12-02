@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="saura_diaz_jorge_agenda.xsd">
+    <ficha categoria="empresa" zona="La flota">
+        <nombre>Carlos</nombre>
+        <apellido1>García</apellido1>
+        <apellido2>López</apellido2>
+        <telefonos>
+            <telefono tipo="movil">678123456</telefono>
+            <telefono tipo="fijo">910123456</telefono>
+        </telefonos>
+        <telefonos_internacionales>
+            <telefono_internacional>+34 678987654</telefono_internacional>
+        </telefonos_internacionales>
+        <emails>
+            <email>carlos.garcia@empresa.com</email>
+        </emails>
+        <direcciones_postales>
+            <direccion>
+                <calle>Av. Principal 123</calle>
+                <codigo_postal>28010</codigo_postal>
+                <ciudad>Madrid</ciudad>
+                <pais>España</pais>
+            </direccion>
+        </direcciones_postales>
+    </ficha>
+    <ficha categoria="particular">
+        <nombre>Ana</nombre>
+        <apellido1>Martínez</apellido1>
+        <telefonos>
+            <telefono tipo="movil">687654321</telefono>
+        </telefonos>
+    </ficha>
+    <ficha categoria="comercial" zona="San Antón">
+        <nombre>Lucía</nombre>
+        <apellido1>Fernández</apellido1>
+        <apellido2>Pérez</apellido2>
+        <telefonos>
+            <telefono tipo="fijo">911223344</telefono>
+        </telefonos>
+        <emails>
+            <email>lucia.fernandez@ventas.com</email>
+        </emails>
+    </ficha>
+    <ficha categoria="empresa">
+        <nombre>Juan</nombre>
+        <apellido1>Ruiz</apellido1>
+        <telefonos>
+            <telefono tipo="fijo">900123456</telefono>
+        </telefonos>
+        <telefonos_internacionales>
+            <telefono_internacional>+44 123456789</telefono_internacional>
+        </telefonos_internacionales>
+    </ficha>
+</agenda>

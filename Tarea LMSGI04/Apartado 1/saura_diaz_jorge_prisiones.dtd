@@ -1,0 +1,28 @@
+<!ELEMENT prisiones (prision+)>
+<!ELEMENT prision (codigo, nombre, director, direccion, fecha_inauguracion, capacidad, funcionarios, reclusos, celdas)>
+<!ELEMENT codigo (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT director (nombre_completo, fecha_nombramiento)>
+<!ELEMENT nombre_completo (#PCDATA)>
+<!ELEMENT fecha_nombramiento (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT fecha_inauguracion (#PCDATA)>
+<!ELEMENT capacidad (#PCDATA)>
+<!ELEMENT funcionarios (funcionario+)>
+<!ELEMENT funcionario (puesto, fecha_incorporacion, nombre_completo)>
+<!ELEMENT puesto (#PCDATA)>
+<!ELEMENT fecha_incorporacion (#PCDATA)>
+<!ELEMENT reclusos (recluso+)>
+<!ELEMENT recluso (numero, nombre_completo, numero_celda, fecha_ingreso, duracion_condena, peligrosidad)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT numero_celda (#PCDATA)>
+<!ELEMENT fecha_ingreso (#PCDATA)>
+<!ELEMENT duracion_condena (#PCDATA)>
+<!ELEMENT peligrosidad (#PCDATA)>
+<!ELEMENT celdas (celda+)>
+<!ELEMENT celda (numero, pabellon, plazas)>
+<!ELEMENT pabellon (#PCDATA)>
+<!ELEMENT plazas (#PCDATA)>
+
+<!ATTLIST puesto tipo (carcelero | administrativo | servicios) #REQUIRED>
+<!ATTLIST peligrosidad nivel (no_peligroso | posiblemente_peligroso | peligroso | muy_peligroso) #REQUIRED>
