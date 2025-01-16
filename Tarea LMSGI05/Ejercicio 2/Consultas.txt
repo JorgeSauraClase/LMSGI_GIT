@@ -1,0 +1,47 @@
+Ejercicio 2 - Consultas XPath
+
+Consulta 1: Código y nombre de los artistas del siglo XVI
+XPath:
+/artistas/artista[nacimiento >= 1501 and nacimiento <= 1600]/concat(@cod, ' - ', nombreCompleto)
+
+Explicación:
+Selecciona los artistas nacidos entre 1501 y 1600, concatenando el atributo `cod` y el elemento `nombreCompleto`.
+Resultado esperado:
+a101 - Diego Velázquez
+a102 - Michelangelo Caravaggio
+
+---
+
+Consulta 2: Año medio de la fecha de nacimiento de todos los artistas
+XPath:
+sum(/artistas/artista/nacimiento) div count(/artistas/artista)
+
+Explicación:
+Calcula el promedio sumando los años de nacimiento y dividiéndolos entre el número total de artistas.
+Resultado esperado:
+1510.25
+
+---
+
+Consulta 3: Nombre y edad con la que murieron todos los artistas excepto el artista con código "a102"
+XPath:
+/artistas/artista[@cod != 'a102' and fallecimiento]/concat(nombreCompleto, ' murió a los ', fallecimiento - nacimiento, ' años.')
+
+Explicación:
+Excluye al artista con código `a102` y calcula la edad al fallecer de los demás artistas.
+Resultado esperado:
+Diego Velázquez murió a los 61 años.
+Herrada de Landsberg murió a los 70 años.
+Francisco de Goya murió a los 82 años.
+
+---
+
+Consulta 4: Nombre, país de nacimiento y edad de fallecimiento de los artistas con código distinto a "a102" que murieron con menos de 75 años
+XPath:
+/artistas/artista[@cod != 'a102' and fallecimiento - nacimiento < 75]/concat(nombreCompleto, ' nació en ', pais, ' y falleció con ', fallecimiento - nacimiento, ' años.')
+
+Explicación:
+Filtra a los artistas que murieron con menos de 75 años, excluyendo al artista con código `a102`, y muestra su nombre, país y edad al fallecer.
+Resultado esperado:
+Diego Velázquez nació en España y falleció con 61 años.
+Herrada de Landsberg nació en Alsacia y falleció con 70 años.
